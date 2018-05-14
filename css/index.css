@@ -1,0 +1,242 @@
+html {
+  line-height: 0 !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+body {
+  font-family: 'Righteous', cursive;
+  background: #34bb62;
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+  height: 100%;
+}
+h1 {
+  text-align: center;
+  color: rgba(50, 50, 50, 0.7);
+}
+.clickable {
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.clickable:hover {
+  color: rgba(30, 30, 30, 0.6);
+}
+#timer {
+  position: absolute;
+  font-family: 'Electrolize', sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  height: 15%;
+  width: 50%;
+  margin: 1% auto 3% auto;
+  left: 25%;
+  top: 50%;
+  font-size: 3vw;
+  text-align: center;
+  z-index: 998;
+}
+@media (max-width: 1000px) {
+  #timer {
+    font-size: 5vw;
+  }
+}
+#label {
+  position: absolute;
+  color: #fff;
+  height: 15%;
+  width: 50%;
+  margin: 1% auto 3% auto;
+  left: 25%;
+  top: 40%;
+  font-size: 2vw;
+  text-align: center;
+  z-index: 998;
+}
+@media (max-width: 1000px) {
+  #label {
+    font-size: 5vw;
+  }
+}
+#timer-container {
+  position: relative;
+  margin: 1% auto;
+  width: 50vw;
+  height: 50vw;
+}
+@media (max-width: 750px) {
+  #timer-container {
+    width: 85vw;
+    height: 85vw;
+  }
+}
+@media (min-width: 1200px) {
+  #timer-container {
+    width: 26vw;
+    height: 26vw;
+  }
+}
+#timer-container svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+}
+#button-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+button {
+  position: relative;
+  display: block;
+  margin: 10px;
+  opacity: 1;
+  background: rgba(200, 200, 200, 0.2);
+  border: 3px solid #fff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 2.5vw;
+  font-family: 'Righteous', cursive;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(30, 30, 30, 0.5);
+  color: rgba(30, 30, 30, 0.6);
+}
+button:focus {
+  border-color: #fff;
+  background: rgba(50, 50, 50, 0.3);
+  outline: none;
+}
+@media (max-width: 1000px) {
+  button {
+    font-size: 4vw;
+  }
+}
+.hide-button {
+  display: none;
+  opacity: 0;
+}
+.hide-label {
+  visibility: 'hidden';
+  opacity: 0;
+}
+#top-label {
+  display: -webkit-box;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 50%;
+  left: 25%;
+  top: 3%;
+  font-size: 2.8vw;
+  font-style: bold;
+  line-height: 1;
+  margin-top: 10px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  color: rgba(50, 50, 50, 0.7);
+}
+@media (max-width: 1000px) {
+  #top-label {
+    font-size: 4.2vw;
+  }
+}
+#set-timer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 2.8vw;
+  font-style: bold;
+  line-height: 1;
+  margin-top: 10px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+@media (max-width: 1000px) {
+  #set-timer {
+    font-size: 4.2vw;
+  }
+}
+#set-timer p {
+  margin: 0;
+  color: rgba(50, 50, 50, 0.7);
+}
+#set-timer span {
+  padding: 0 5px 0 5px;
+  font-size: 4vw;
+}
+@media (max-width: 1000px) {
+  #set-timer span {
+    font-size: 6vw;
+  }
+}
+.time-display {
+  display: inline-block;
+  overflow: hidden;
+  width: 40%;
+}
+#session-time {
+  margin: 10px 40px 10px 20px;
+  color: #fff;
+}
+#break-time {
+  margin: 10px 20px 10px 40px;
+  color: #fff;
+}
+#svg-outer {
+  stroke-width: 20;
+  fill: none;
+  stroke: #fff;
+  position: absolute;
+}
+#svg-inner {
+  stroke-width: 10;
+  fill: none;
+  stroke: #fff;
+  position: absolute;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+@-webkit-keyframes dash-outer {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash-outer {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes dash-inner {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash-inner {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.animate-outer {
+  -webkit-animation-name: dash-outer;
+          animation-name: dash-outer;
+}
